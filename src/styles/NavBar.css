@@ -1,0 +1,34 @@
+.header{
+  background-color: black;
+  color: white;
+  text-align: center;color: white;
+  text-align: center;
+}
+
+/* Add a black background color to the top navigation */
+.top-menu {
+  background-color: blue;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.top-menu a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.top-menu a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.top-menu a.active {
+  background-color: #04AA6D;
+  color: white;
+}
