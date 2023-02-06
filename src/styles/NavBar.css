@@ -9,6 +9,7 @@
 .top-menu {
   background-color: blue;
   overflow: hidden;
+  text-align: center;
 }
 
 /* Style the links inside the navigation bar */
