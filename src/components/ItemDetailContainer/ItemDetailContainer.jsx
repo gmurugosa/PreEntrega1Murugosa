@@ -1,5 +1,6 @@
 import React from 'react'
 import './ItemDetailContainer.css';
+import ItemDetail from '../ItemDetail/ItemDetail'
 import { obtenerProductoPorId } from "../../firebase/firebase.js"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
@@ -26,14 +27,7 @@ const ItemDetailContainer = () => {
   return (
 
     <>
-      <div>
-        <h1>Detalle de Item</h1>
-        <img src={product.image} alt="pelicula1" />
-        <h4>{`Nombre ${product.name}`}</h4>
-        <h4>{`Categoria: ${product.category}`}</h4>
-        <h4>{`Precio: USD ${product.price}`}</h4>
-        <h4>{`Stock: ${product.price}`}</h4>
-      </div>
+      <ItemDetail product={product}/>
     </>
 
   )

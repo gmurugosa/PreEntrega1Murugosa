@@ -29,7 +29,7 @@ export const obtenerProductos = () => {
 export const obtenerProductoPorId = (id) => {
   return new Promise((resolve, reject) => {
     getDoc(doc(db,collectionName,id)).then(((doc)=>{
-    resolve(doc.data())
+    return resolve(doc.data())
     }))
   });
 };

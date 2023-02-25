@@ -1,6 +1,6 @@
 import React from 'react'
 import './ItemListContainer.css'
-import ItemList from '../ItemList/ItemList.jsx'
+import ItemList from '../ItemList/ItemList'
 import { obtenerProductos,obtenerProductosPorCategoria } from "../../firebase/firebase.js"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
