@@ -1,7 +1,7 @@
 import React from 'react'
 import './ItemList.css';
-
-const ItemListContainer = ({product}) => {
+import { Link } from 'react-router-dom';
+const ItemListContainer = ({ product }) => {
   return (
 
     <div className='item-list-container'>
@@ -9,8 +9,10 @@ const ItemListContainer = ({product}) => {
       <div className="item-title"><strong>{product.name}</strong></div>
       <div className="item-stock">Stock disponible: <strong>{product.stock}</strong></div>
       <div className="item-price">Precio: <strong>USD {product.price}</strong></div>
-      <a href={`/item/${product.id}`} className="btn btn-success btn-sm" role="button" aria-pressed="true">Comprar</a>
-      </div>
+      <Link to={`/item/${product.id}`} >
+      <button className="btn btn-success btn-sm">Detalle</button>
+      </Link>
+    </div>
 
   )
 }

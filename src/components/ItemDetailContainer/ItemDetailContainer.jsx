@@ -21,13 +21,13 @@ const ItemDetailContainer = () => {
         console.error(error);
       }
     })();
-  }, [])
+  }, [id])
   
   
   return (
 
     <>
-      <ItemDetail product={product}/>
+      <ItemDetail id={id} product={product}/>
     </>
 
   )

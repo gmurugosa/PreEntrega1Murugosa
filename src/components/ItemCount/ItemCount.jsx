@@ -1,9 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from "react";
 
-const ItemCount = ({stock}) => {    
-
-const [cantidad,setCantidad] = useState(1)    
+const ItemCount = ({stock,cantidad,setCantidad}) => {    
 
 function incrementar(){
     if(cantidad>=stock){

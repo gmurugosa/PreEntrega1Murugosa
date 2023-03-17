@@ -10,7 +10,7 @@ const ItemDetailCategoryContainer = () => {
   //hook
   const [products, setProducts] = useState([])
   const { id } = useParams()
-
+  
   useEffect(() => {
     if(id){
       (async () => {
@@ -36,7 +36,7 @@ const ItemDetailCategoryContainer = () => {
         }
       })();
     }
-  }, [])
+  }, [id])
 return (
 
     <>
