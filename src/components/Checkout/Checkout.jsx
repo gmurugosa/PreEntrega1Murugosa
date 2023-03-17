@@ -4,6 +4,7 @@ import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { guardarCheckout } from "../../firebase/firebase.js"
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
 
@@ -70,6 +71,7 @@ const Checkout = () => {
       const checkout = { nombre: nombre, apellido: apellido, telefono: telefono, data: { cartList }, total: getTotalCheckout(), fecha: new Date().getTime() }
       const idCheckout = await guardarCheckout(checkout);
       setIdCheckout(idCheckout)
+      alert("Su orden ha sido Ingresada con id: "+ idCheckout)
       emptyCart()
       console.log(idCheckout)
     } catch (error) {
@@ -80,7 +82,7 @@ const Checkout = () => {
   return (
     <>
 
-      {cartList.length === 0 && <h3>No has cargado productos al carrito</h3>}
+      {cartList.length === 0 && <h5>Para realizar una compra debes agregar productos al carrito</h5>}
 
       {cartList.length > 0 &&
         <div>
